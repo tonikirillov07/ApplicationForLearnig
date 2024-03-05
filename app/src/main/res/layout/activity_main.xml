@@ -4,81 +4,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#131313"
+    android:background="@color/background_color"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/title"
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="186dp"
+        android:orientation="horizontal"
+        android:background="@color/grass_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></LinearLayout>
+
+    <ImageView
+        android:id="@+id/star1"
+        android:layout_width="45dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="99dp"
+        app:layout_constraintEnd_toStartOf="@+id/star3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/star2"
+        android:layout_width="45dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="183dp"
+        android:layout_marginTop="119dp"
+        android:layout_marginEnd="93dp"
+        app:layout_constraintEnd_toStartOf="@+id/star3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/star3"
+        android:layout_width="45dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="44dp"
+        app:layout_constraintEnd_toStartOf="@+id/star3"
+        app:layout_constraintStart_toEndOf="@+id/star3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/star4"
+        android:layout_width="45dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="226dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/star1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/star5"
+        android:layout_width="45dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="276dp"
+        app:layout_constraintEnd_toStartOf="@+id/star3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/star3"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/moon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:fontFamily="sans-serif-black"
-        android:text="@string/title"
-        android:textSize="28sp"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="58dp"
+        app:layout_constraintEnd_toStartOf="@+id/star2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/equationText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="175dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="178dp"
-        android:fontFamily="sans-serif-black"
-        android:text="TextView"
-        android:textColor="#8E8A8A"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.411"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
-
-    <EditText
-        android:id="@+id/firstXEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginTop="28dp"
-        android:background="@drawable/text_field_background"
-        android:ems="10"
-        android:hint="@string/x1"
-        android:inputType="numberDecimal"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/equationText" />
-
-    <EditText
-        android:id="@+id/secondXEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/text_field_background"
-        android:ems="10"
-        android:hint="@string/x2"
-        android:inputType="numberDecimal"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstXEditText" />
-
-    <Button
-        android:id="@+id/calculateButton"
-        android:layout_width="201dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="44dp"
-        android:text="@string/check"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/secondXEditText" />
-
+        app:layout_constraintTop_toBottomOf="@+id/star1"
+        app:srcCompat="@drawable/moon" />
 </androidx.constraintlayout.widget.ConstraintLayout>
